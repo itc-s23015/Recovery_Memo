@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: memo-Recovery
+  datasource:
+    url: jdbc:mariadb://localhost:3306/memo_Recovery
+    username: root
+    password: aiueo
+    driver-class-name: org.mariadb.jdbc.Driver

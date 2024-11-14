@@ -1,5 +1,6 @@
 package jp.ac.itcollege.s23015.memo_recovery.presentation.form
 
+import com.fasterxml.jackson.annotation.JsonFormat
 import kotlinx.datetime.LocalDateTime
 import kotlinx.serialization.Serializable
 
@@ -27,6 +28,7 @@ data class GetMemoDetailResponse(
 data class AddMemoRequest(
     val id: Long,
     val content: String,
+//    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")
     val createdDate: LocalDateTime
 )
 
@@ -36,3 +38,4 @@ data class UpdateMemoRequest(
     val content: String?
 //    val createdDate: LocalDateTime?,
 )
+

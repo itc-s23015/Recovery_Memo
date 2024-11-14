@@ -30,7 +30,8 @@ class SecurityConfig (
         http {
             authorizeHttpRequests {
                 authorize("/login", permitAll)
-                authorize("/admin/**", hasAuthority(RoleType.ADMIN.toString()))
+//                authorize("/admin/**", hasAuthority(RoleType.ADMIN.toString()))
+                authorize("/memo/**", hasAuthority(RoleType.USER.toString()))
                 authorize("/memo/**", authenticated)
 //                authorize("/memo/**", permitAll)
                 authorize(anyRequest, authenticated)
